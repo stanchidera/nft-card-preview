@@ -1,0 +1,169 @@
+* {
+  font-family: "Outfit", sans-serif;
+  padding: 0;
+  margin: 0;
+}
+body {
+  background-color: hsl(217, 54%, 11%);
+  display: flex;
+  justify-content: center;
+  padding-top: 10%;
+}
+
+.content {
+  background-color: hsl(216, 50%, 16%);
+  padding: 30px;
+  display: inline-flex;
+  flex-direction: column;
+  border-radius: 24px;
+  width: 400px;
+}
+.nft-image {
+  border-radius: 12px;
+  width: 100%;
+  position: relative;
+  background-color: #00fff8;
+  overflow: hidden;
+}
+
+.nft-image img {
+  width: 100%;
+  border-radius: 12px;
+  height: 100%;
+}
+.view img {
+  width: 32px;
+  height: auto;
+  position: absolute;
+  top: 50%;
+  left: 45%;
+  opacity: 0;
+}
+
+.nft-image:hover img {
+  opacity: 50%;
+  cursor: pointer;
+  z-index: 999;
+}
+
+.nft-image:hover .view img {
+  opacity: 100%;
+}
+.nft-name {
+  color: hsl(0, 0%, 100%);
+  font-weight: 600;
+  font-size: 30px;
+  padding: 24px 0;
+}
+.nft-name:hover {
+  color: #00fff8;
+  cursor: pointer;
+  transition: 0.5s ease;
+}
+.description {
+  font-weight: 300;
+  font-size: 22px;
+  color: #8bacd9;
+  margin-bottom: 28px;
+}
+.price_time {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 20px;
+  margin-bottom: 22px;
+}
+.price {
+  font-size: 22px;
+  font-weight: 600;
+  color: #00fff8;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.price img {
+  width: 16px;
+}
+.time {
+  display: flex;
+  gap: 6px;
+  align-items: center;
+  color: #8bacd9;
+}
+.time img {
+  width: 24px;
+  height: 24px;
+}
+.hr {
+  height: 2px;
+  background-color: hsl(215, 32%, 27%);
+  margin-bottom: 22px;
+}
+.creator {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  font-size: 20px;
+  gap: 10px;
+  color: #8bacd9;
+}
+.creator img {
+  width: 48px;
+  border-radius: 48px;
+  border: 2px solid white;
+}
+.creator .creator-name {
+  color: white;
+}
+.creator .creator-name:hover {
+  color: #00fff8;
+  cursor: pointer;
+  transition: 0.5s ease;
+}
+
+/* for smaller */
+
+@media screen and (max-width: 420px) {
+  body {
+    padding: 0 18px;
+    padding-top: 48px;
+  }
+  .content {
+    padding: 20px;
+    display: inline-flex;
+    flex-direction: column;
+    border-radius: 24px;
+    width: 400px;
+  }
+  .nft-name {
+    font-size: 24px;
+  }
+  .description {
+    font-size: 18px;
+  }
+  .price {
+    font-size: 18px;
+  }
+
+  .price img {
+    width: 12px;
+  }
+  .time {
+    font-size: 18px;
+  }
+  .time img {
+    width: 18px;
+    height: 18px;
+  }
+  .creator {
+    font-size: 18px;
+    font-weight: 300;
+  }
+  .hr {
+    margin-bottom: 14px;
+  }
+  .creator img {
+    width: 32px;
+    border: 1px solid white;
+  }
+}
